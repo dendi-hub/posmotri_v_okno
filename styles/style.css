@@ -27,10 +27,12 @@ ul,
 ol,
 li,
 blockquote,
-fieldset {
+fieldset,
+input {
   margin: 0;
   padding: 0;
   border: none;
+  outline: none;
 }
 
 ul,
@@ -49,8 +51,8 @@ ol {
 .result {
   display: flex;
   flex-direction: column;
+  margin-top: 78px;
   justify-content: flex-end;
-  height: 534px;
 }
 
 .result__video-container {
@@ -91,9 +93,13 @@ ol {
   align-items: center;
 }
 
+
 .search-form__label:has(:focus-visible) {
   outline: 1px solid white;
   outline-offset: 1px;
+}
+.search-form__label:has(:active) {
+   outline: none;
 }
 
 .search-form__label-text {
@@ -138,7 +144,7 @@ ol {
 }
 
 .search-form__textfield:focus {
-  outline: none;
+  outline: 0;
 }
 
 .search-form__textfield:active {
@@ -210,7 +216,6 @@ ol {
 .content__details {
   display: flex;
   flex-direction: column;
-  height: 534px;
   gap: 26px;
 }
 
@@ -237,15 +242,14 @@ ol {
 .content__list {
   display: flex;
   flex-direction: column;
-  height: 534px;
-  overflow: auto;
+  overflow:auto;
   gap: 30px;
+  height: 298px;
   position: relative;
 }
 
 .content__list-item {
   display: flex;
-
   width: 100%;
   flex-direction: column;
 }
